@@ -14,10 +14,10 @@ describe('Main component', () => {
     );
 
     expect(screen.queryByText(/left/)).toBeNull();
-    fireEvent.change(screen.getByRole('textbox'), {
-      target: { value: 'React' },
-    });
-    expect(screen.getByText(/Active/i)).toBeInTheDocument();
+    expect(screen.getAllByRole('button')).toHaveLength(5);
+    fireEvent.click(screen.getByRole('button', { name: /All/i }));
+    fireEvent.click(screen.getByRole('button', { name: /Active/i }));
+    expect(screen.getByRole('button', { name: /clear completed/i })).toBeDisabled();
   });
 });
 
