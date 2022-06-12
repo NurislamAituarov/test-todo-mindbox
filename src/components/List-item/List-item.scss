@@ -1,0 +1,24 @@
+.list-item__wrapper {
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(208, 208, 208);
+  div {
+    width: 100%;
+  }
+  .label {
+    margin-left: 10px;
+    font-size: 26px;
+  }
+  .strike {
+    color: rgb(183, 183, 183);
+  }
+}
+
+@media (max-width: 768px) {
+  .list-item__wrapper {
+    .label {
+      font-size: 16px;
+    }
+  }
+}

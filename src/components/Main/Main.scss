@@ -1,0 +1,35 @@
+.sort-wrapper {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .sort-wrapper {
+    display: block;
+    div {
+      float: left;
+    }
+    :last-child {
+      margin-left: 20px;
+    }
+  }
+}
+@media (max-width: 415px) {
+  .sort-wrapper {
+    text-align: center;
+    margin-top: 10px;
+    div {
+      margin: 10px 0;
+    }
+    :last-child {
+      margin-left: 0px;
+    }
+  }
+}
